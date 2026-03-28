@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RM Media | Premium Media & Design</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+    
+    body { font-family: 'Inter', sans-serif; }
+    .heading { font-family: 'Playfair Display', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)), 
+                  url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+    }
+    .card-hover:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: rgb(168 85 247);
+      transition: all 0.3s;
+    }
+    .nav-link:hover:after {
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full bg-black/95 backdrop-blur-lg z-50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-gradient-to-br from-purple-600 to-violet-600 rounded-2xl flex items-center justify-center text-3xl font-bold">RM</div>
+        <div>
+          <span class="text-3xl font-bold tracking-tighter heading">RM MEDIA</span>
+        </div>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-widest font-medium">
+        <a href="#services" class="nav-link hover:text-purple-400">Services</a>
+        <a href="#portfolio" class="nav-link hover:text-purple-400">Portfolio</a>
+        <a href="#contact" class="nav-link hover:text-purple-400">Contact</a>
+      </div>
+      
+      <a href="tel:7736270657" class="flex items-center gap-2 text-sm hover:text-purple-400 transition">
+        <i class="fas fa-phone"></i>
+        <span>(773) 627-0657</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-bg h-screen flex items-center justify-center text-center relative">
+    <div class="max-w-4xl px-6 pt-20">
+      <h1 class="text-6xl md:text-8xl font-bold tracking-tighter heading leading-none mb-6">WE TELL<br>YOUR STORY</h1>
+      <p class="text-xl md:text-2xl text-white/80 max-w-lg mx-auto mb-10">
+        Professional photography, videography, web design &amp; audio production.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#portfolio" class="bg-white text-black px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all">VIEW OUR WORK</a>
+        <a href="#contact" class="border-2 border-white/70 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all">START A PROJECT</a>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 text-white/40 text-sm tracking-widest">SCROLL TO EXPLORE ↓</div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-24 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16 heading">Our Services</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-zinc-900 p-10 rounded-3xl card-hover transition-all border border-white/5">
+          <i class="fas fa-globe text-6xl text-purple-500 mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-4">Web Design</h3>
+          <p class="text-white/70">Modern, responsive websites with beautiful animations and user experience.</p>
+        </div>
+        <div class="bg-zinc-900 p-10 rounded-3xl card-hover transition-all border border-white/5">
+          <i class="fas fa-camera text-6xl text-purple-500 mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-4">Photography</h3>
+          <p class="text-white/70">Professional commercial, portrait, and event photography.</p>
+        </div>
+        <div class="bg-zinc-900 p-10 rounded-3xl card-hover transition-all border border-white/5">
+          <i class="fas fa-video text-6xl text-purple-500 mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-4">Videography</h3>
+          <p class="text-white/70">Cinematic videos, brand films, and high-quality video production.</p>
+        </div>
+        <div class="bg-zinc-900 p-10 rounded-3xl card-hover transition-all border border-white/5">
+          <i class="fas fa-microphone-alt text-6xl text-purple-500 mb-6"></i>
+          <h3 class="text-2xl font-semibold mb-4">Audio Production</h3>
+          <p class="text-white/70">Studio recording, podcast production, and sound design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-black">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold heading mb-6">Let's Create Together</h2>
+      <p class="text-white/70 mb-12">Ready to bring your vision to life?</p>
+      
+      <div class="bg-zinc-900 rounded-3xl p-10">
+        <p class="text-2xl mb-8">📞 <strong>(773) 627-0657</strong></p>
+        <p class="text-xl mb-8">✉️ <a href="mailto:info@robynmonroemedia.com" class="hover:text-purple-400">info@robynmonroemedia.com</a></p>
+        <p class="text-purple-400 text-sm tracking-widest">CHICAGO, ILLINOIS</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black py-12 text-center text-white/40 text-sm border-t border-white/10">
+    <p>&copy; 2025 RM Media • All Rights Reserved</p>
+    <p class="mt-2">www.thergmedia.com</p>
+  </footer>
+
+  <script>
+    // Simple Tailwind script
+    tailwind.config = {
+      content: [],
+      theme: {
+        extend: {}
+      }
+    }
+  </script>
+</body>
+</html>
