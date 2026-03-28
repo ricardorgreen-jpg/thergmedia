@@ -32,8 +32,13 @@
       background-color: rgb(168 85 247);
       transition: all 0.3s;
     }
-    .nav-link:hover:after {
-      width: 100%;
+    .nav-link:hover:after { width: 100%; }
+    .modal {
+      animation: modalPop 0.3s ease-out;
+    }
+    @keyframes modalPop {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
@@ -44,9 +49,7 @@
     <div class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <div class="w-11 h-11 bg-gradient-to-br from-purple-600 to-violet-600 rounded-2xl flex items-center justify-center text-3xl font-bold">RM</div>
-        <div>
-          <span class="text-3xl font-bold tracking-tighter heading">RM MEDIA</span>
-        </div>
+        <div><span class="text-3xl font-bold tracking-tighter heading">RM MEDIA</span></div>
       </div>
       
       <div class="hidden md:flex items-center gap-10 text-sm uppercase tracking-widest font-medium">
@@ -56,8 +59,7 @@
       </div>
       
       <a href="tel:7736270657" class="flex items-center gap-2 text-sm hover:text-purple-400 transition">
-        <i class="fas fa-phone"></i>
-        <span>(773) 627-0657</span>
+        <i class="fas fa-phone"></i> (773) 627-0657
       </a>
     </div>
   </nav>
@@ -70,18 +72,19 @@
         Professional photography, videography, web design &amp; audio production.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#portfolio" class="bg-white text-black px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all">VIEW OUR WORK</a>
+        <a href="#portfolio" onclick="document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' }); return false;" 
+           class="bg-white text-black px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-purple-600 hover:text-white transition-all cursor-pointer">
+          VIEW OUR WORK
+        </a>
         <a href="#contact" class="border-2 border-white/70 px-10 py-4 rounded-2xl font-semibold text-lg hover:bg-white/10 transition-all">START A PROJECT</a>
       </div>
     </div>
-    <div class="absolute bottom-10 left-1/2 text-white/40 text-sm tracking-widest">SCROLL TO EXPLORE ↓</div>
   </section>
 
   <!-- SERVICES -->
   <section id="services" class="py-24 bg-zinc-950">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-5xl font-bold text-center mb-16 heading">Our Services</h2>
-      
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div class="bg-zinc-900 p-10 rounded-3xl card-hover transition-all border border-white/5">
           <i class="fas fa-globe text-6xl text-purple-500 mb-6"></i>
@@ -107,33 +110,135 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="py-24 bg-black">
-    <div class="max-w-2xl mx-auto px-6 text-center">
-      <h2 class="text-5xl font-bold heading mb-6">Let's Create Together</h2>
-      <p class="text-white/70 mb-12">Ready to bring your vision to life?</p>
+  <!-- PORTFOLIO -->
+  <section id="portfolio" class="py-24 bg-black">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-4 heading">Featured Work</h2>
+      <p class="text-center text-white/60 mb-12">Click on any project to view details</p>
       
-      <div class="bg-zinc-900 rounded-3xl p-10">
-        <p class="text-2xl mb-8">📞 <strong>(773) 627-0657</strong></p>
-        <p class="text-xl mb-8">✉️ <a href="mailto:info@robynmonroemedia.com" class="hover:text-purple-400">info@robynmonroemedia.com</a></p>
-        <p class="text-purple-400 text-sm tracking-widest">CHICAGO, ILLINOIS</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolioGrid">
+        <!-- Populated by JavaScript -->
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
+  <section id="contact" class="py-24 bg-zinc-950">
+    <div class="max-w-2xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center heading mb-6">Let's Work Together</h2>
+      <p class="text-center text-white/60 mb-10">Phone: (773) 627-0657 • Email: info@robynmonroemedia.com</p>
+      
+      <form id="contactForm" class="space-y-6 bg-black p-10 rounded-3xl">
+        <input type="text" id="name" placeholder="Your Name" required class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-6 py-4 focus:border-purple-500 outline-none">
+        <input type="email" id="email" placeholder="Email Address" required class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-6 py-4 focus:border-purple-500 outline-none">
+        <select id="service" class="w-full bg-zinc-900 border border-white/10 rounded-2xl px-6 py-4 focus:border-purple-500 outline-none">
+          <option value="">Select Service...</option>
+          <option value="Web Design">Web Design</option>
+          <option value="Photography">Photography</option>
+          <option value="Videography">Videography</option>
+          <option value="Audio Production">Audio Production</option>
+        </select>
+        <textarea id="message" placeholder="Tell us about your project..." rows="5" required class="w-full bg-zinc-900 border border-white/10 rounded-3xl px-6 py-4 focus:border-purple-500 outline-none"></textarea>
+        
+        <button type="submit" id="submitBtn" class="w-full py-5 bg-gradient-to-r from-purple-600 to-violet-600 rounded-2xl text-lg font-semibold hover:brightness-110 transition">
+          SEND MESSAGE
+        </button>
+      </form>
+
+      <div id="successMessage" class="hidden mt-6 text-center text-green-400 font-medium">
+        ✅ Thank you! We'll get back to you within 48 hours.
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO MODAL -->
+  <div id="modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[100]">
+    <div class="modal bg-zinc-900 rounded-3xl max-w-2xl w-full mx-4 overflow-hidden">
+      <div class="relative">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 w-10 h-10 rounded-full flex items-center justify-center text-xl">×</button>
+        <img id="modalImage" src="" class="w-full h-80 object-cover">
+        <div class="p-8">
+          <span id="modalCategory" class="text-purple-400 text-sm tracking-widest"></span>
+          <h3 id="modalTitle" class="text-3xl font-semibold mt-2 mb-4"></h3>
+          <p id="modalDesc" class="text-white/70 leading-relaxed"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <footer class="bg-black py-12 text-center text-white/40 text-sm border-t border-white/10">
-    <p>&copy; 2025 RM Media • All Rights Reserved</p>
+    <p>&copy; 2025 RM Media • Chicago, IL</p>
     <p class="mt-2">www.thergmedia.com</p>
   </footer>
 
   <script>
-    // Simple Tailwind script
-    tailwind.config = {
-      content: [],
-      theme: {
-        extend: {}
-      }
+    // Portfolio Data
+    const projects = [
+      { title: "Corporate Brand Film", category: "VIDEOGRAPHY", desc: "High-end promotional video for a tech startup with drone shots and cinematic editing.", img: "https://picsum.photos/id/1015/800/600" },
+      { title: "Fashion Editorial", category: "PHOTOGRAPHY", desc: "Studio and location photography campaign for a luxury fashion brand.", img: "https://picsum.photos/id/201/800/600" },
+      { title: "E-commerce Website", category: "WEB DESIGN", desc: "Complete redesign and development of a modern online store.", img: "https://picsum.photos/id/301/800/600" },
+      { title: "Music Video", category: "VIDEOGRAPHY", desc: "Directed and produced a music video with synchronized editing and VFX.", img: "https://picsum.photos/id/133/800/600" },
+      { title: "Product Photography", category: "PHOTOGRAPHY", desc: "Commercial product campaign for a new skincare line.", img: "https://picsum.photos/id/180/800/600" },
+      { title: "Podcast Studio", category: "AUDIO", desc: "Full audio production and sound design for a popular business podcast.", img: "https://picsum.photos/id/201/800/600" }
+    ];
+
+    // Render Portfolio
+    function renderPortfolio() {
+      const container = document.getElementById('portfolioGrid');
+      container.innerHTML = '';
+      
+      projects.forEach(project => {
+        const div = document.createElement('div');
+        div.className = "group relative overflow-hidden rounded-3xl cursor-pointer";
+        div.innerHTML = `
+          <img src="${project.img}" class="w-full h-80 object-cover transition-all group-hover:scale-110 duration-500" alt="${project.title}">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
+            <span class="text-purple-400 text-xs tracking-widest">${project.category}</span>
+            <h3 class="text-2xl font-semibold mt-2">${project.title}</h3>
+          </div>
+        `;
+        div.onclick = () => showModal(project);
+        container.appendChild(div);
+      });
     }
+
+    // Modal Functions
+    function showModal(project) {
+      document.getElementById('modalImage').src = project.img;
+      document.getElementById('modalCategory').textContent = project.category;
+      document.getElementById('modalTitle').textContent = project.title;
+      document.getElementById('modalDesc').textContent = project.desc;
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modal').classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Form Handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      const success = document.getElementById('successMessage');
+      
+      btn.textContent = 'SENDING...';
+      btn.disabled = true;
+      
+      setTimeout(() => {
+        success.classList.remove('hidden');
+        this.reset();
+        btn.textContent = 'SEND MESSAGE';
+        btn.disabled = false;
+        
+        setTimeout(() => success.classList.add('hidden'), 5000);
+      }, 1200);
+    });
+
+    // Initialize
+    window.onload = renderPortfolio;
   </script>
 </body>
 </html>
