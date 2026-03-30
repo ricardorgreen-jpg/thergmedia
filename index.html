@@ -15,43 +15,39 @@
                     colors: {
                         background: '#09090b',
                         surface: '#18181b',
-                        accent: '#a855f7', // Purple accent
+                        accent: '#a855f7', 
                     }
                 }
             }
         }
     </script>
     <style>
+        html { scroll-behavior: smooth; }
         body { background-color: #09090b; color: #f4f4f5; }
-        .gradient-text {
-            background: linear-gradient(to right, #ffffff, #a1a1aa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     </style>
 </head>
 <body class="antialiased selection:bg-accent selection:text-white">
 
     <nav class="fixed w-full z-50 bg-background/90 backdrop-blur border-b border-white/10 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center font-bold text-white tracking-tighter">RM</div>
             <div>
                 <h1 class="font-bold text-xl leading-none tracking-wide">RM MEDIA</h1>
                 <p class="text-[10px] text-zinc-500 tracking-widest uppercase mt-1">Est 2018</p>
             </div>
-        </div>
+        </a>
         <div class="hidden md:flex gap-8 text-sm font-semibold tracking-wide">
-            <a href="#" class="hover:text-accent transition">Services</a>
-            <a href="#" class="hover:text-accent transition">Portfolio</a>
-            <a href="#" class="hover:text-accent transition">About</a>
-            <a href="#" class="hover:text-accent transition">Contact</a>
+            <a href="#services" class="hover:text-accent transition">Services</a>
+            <a href="#portfolio" class="hover:text-accent transition">Portfolio</a>
+            <a href="about.html" class="hover:text-accent transition">About</a>
+            <a href="#contact" class="hover:text-accent transition">Contact</a>
         </div>
         <div class="flex items-center gap-6">
-            <div class="hidden lg:flex items-center gap-2 text-sm">
+            <a href="tel:7736270657" class="hidden lg:flex items-center gap-2 text-sm hover:text-accent transition">
                 <i class="fa-solid fa-phone text-zinc-400"></i>
                 <span>(773) 627-0657</span>
-            </div>
-            <button class="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-zinc-200 transition">LET'S CREATE</button>
+            </a>
+            <a href="#contact" class="bg-white text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-zinc-200 transition">LET'S CREATE</a>
         </div>
     </nav>
 
@@ -72,279 +68,74 @@
                 Premium photography, videography, web design and audio production. Creating unforgettable visual experiences since 2018.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <button class="bg-white text-black px-8 py-4 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-zinc-200 transition">
+                <a href="#portfolio" class="bg-white text-black px-8 py-4 rounded-full font-bold text-sm flex items-center justify-center gap-2 hover:bg-zinc-200 transition">
                     VIEW OUR WORK <i class="fa-solid fa-play text-xs"></i>
-                </button>
-                <button class="border border-white/20 px-8 py-4 rounded-full font-bold text-sm text-white hover:bg-white/10 transition backdrop-blur-sm">
+                </a>
+                <a href="#contact" class="border border-white/20 px-8 py-4 rounded-full font-bold text-sm text-white hover:bg-white/10 transition backdrop-blur-sm">
                     START A PROJECT
-                </button>
-            </div>
-            
-            <div class="mt-20 flex flex-col items-center gap-2 text-xs text-zinc-500 uppercase tracking-widest">
-                <span>Scroll to explore</span>
-                <div class="w-5 h-8 border border-zinc-600 rounded-full flex justify-center p-1">
-                    <div class="w-1 h-2 bg-zinc-400 rounded-full animate-bounce"></div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto">
+    <section id="services" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <p class="text-accent text-sm tracking-[0.2em] font-bold mb-3 uppercase">What we do best</p>
             <h2 class="text-4xl md:text-5xl font-bold">Signature Services</h2>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-surface p-8 rounded-2xl border border-white/5 hover:border-white/10 transition group">
+            <a href="services.html#web" class="bg-surface p-8 rounded-2xl border border-white/5 hover:border-white/10 transition group">
                 <div class="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition">
                     <i class="fa-solid fa-globe text-2xl"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">Web Design</h3>
-                <p class="text-zinc-400 text-sm leading-relaxed">Stunning, responsive websites that capture your brand and drive results. Custom development with modern animations.</p>
-            </div>
-            <div class="bg-surface p-8 rounded-2xl border border-white/5 hover:border-white/10 transition group">
+                <p class="text-zinc-400 text-sm leading-relaxed">Stunning, responsive websites that capture your brand and drive results.</p>
+            </a>
+            <a href="services.html#photo" class="bg-surface p-8 rounded-2xl border border-white/5 hover:border-white/10 transition group">
                 <div class="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition">
                     <i class="fa-solid fa-camera text-2xl"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-4">Photography</h3>
-                <p class="text-zinc-400 text-sm leading-relaxed">Professional photography services including portraits, events, product shoots, and commercial campaigns.</p>
+                <p class="text-zinc-400 text-sm leading-relaxed">Professional photography services including portraits and commercial campaigns.</p>
+            </a>
             </div>
-            <div class="bg-surface p-8 rounded-2xl border border-white/5 hover:border-white/10 transition group">
-                <div class="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition">
-                    <i class="fa-solid fa-video text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Videography</h3>
-                <p class="text-zinc-400 text-sm leading-relaxed">Cinematic video production, corporate films, music videos, drone footage and post-production excellence.</p>
-            </div>
-            <div class="bg-surface p-8 rounded-2xl border border-white/5 hover:border-white/10 transition group">
-                <div class="w-14 h-14 bg-white/5 rounded-xl flex items-center justify-center mb-6 text-accent group-hover:scale-110 transition">
-                    <i class="fa-solid fa-microphone text-2xl"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Audio Production</h3>
-                <p class="text-zinc-400 text-sm leading-relaxed">High-quality audio recording, sound design, podcast production, music mixing and mastering.</p>
-            </div>
-        </div>
     </section>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-            <div>
-                <p class="text-accent text-sm tracking-[0.2em] font-bold mb-3 uppercase">Featured Work</p>
-                <h2 class="text-4xl md:text-5xl font-bold">Selected Projects</h2>
-            </div>
-            <div class="flex flex-wrap gap-2 text-sm font-medium">
-                <button class="bg-accent px-5 py-2 rounded-full text-white">All Work</button>
-                <button class="bg-surface border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition">Web</button>
-                <button class="bg-surface border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition">Photography</button>
-                <button class="bg-surface border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition">Videography</button>
-                <button class="bg-surface border border-white/10 px-5 py-2 rounded-full hover:bg-white/5 transition">Audio</button>
-            </div>
+    <section id="portfolio" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold">Selected Projects</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface flex flex-col justify-end">
-                <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition duration-500">
-                <div class="relative z-10 p-8 bg-gradient-to-t from-background via-background/80 to-transparent">
-                    <p class="text-accent text-xs tracking-widest font-bold mb-2 uppercase">Photography</p>
-                    <h3 class="text-2xl font-bold mb-2">Product Photography Campaign</h3>
-                    <p class="text-sm text-zinc-300 mb-6">Commercial product shots for a new skincare line.</p>
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-zinc-500">Nov 2024</span>
-                        <button class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition backdrop-blur">VIEW CASE STUDY</button>
-                    </div>
-                </div>
-            </div>
-            <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface flex flex-col justify-end">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition duration-500">
-                <div class="relative z-10 p-8 bg-gradient-to-t from-background via-background/80 to-transparent">
-                    <p class="text-accent text-xs tracking-widest font-bold mb-2 uppercase">Web</p>
-                    <h3 class="text-2xl font-bold mb-2">E-commerce Website Redesign</h3>
-                    <p class="text-sm text-zinc-300 mb-6">Complete redesign and development of an online store with custom animations.</p>
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-zinc-500">Nov 2024</span>
-                        <button class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition backdrop-blur">VIEW CASE STUDY</button>
-                    </div>
-                </div>
-            </div>
-             <div class="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-surface flex flex-col justify-end">
-                <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition duration-500">
-                <div class="relative z-10 p-8 bg-gradient-to-t from-background via-background/80 to-transparent">
-                    <p class="text-accent text-xs tracking-widest font-bold mb-2 uppercase">Videography</p>
-                    <h3 class="text-2xl font-bold mb-2">Music Video Production</h3>
-                    <p class="text-sm text-zinc-300 mb-6">Directed and produced a music video with synchronized editing and VFX.</p>
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-zinc-500">Oct 2024</span>
-                        <button class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition backdrop-blur">VIEW CASE STUDY</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="mt-12 text-center">
-            <button class="border border-white/20 px-8 py-3 rounded-full text-sm font-semibold hover:bg-white/5 transition">
-                WANT TO WORK WITH US? &rarr;
-            </button>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">
-                    Robyn Monroe and team create stories that resonate
-                </h2>
-                <p class="text-zinc-400 mb-6 leading-relaxed">
-                    RM Media was founded with a passion for storytelling through the lens. From intimate portraits to large scale commercial campaigns, our multidisciplinary team of creatives deliver exceptional results.
-                </p>
-                <p class="text-zinc-400 mb-12 leading-relaxed">
-                    Based in Chicago, we work with visionary brands, musicians, and organizations around the world. Our process is collaborative, our standards are uncompromising.
-                </p>
-                
-                <div class="flex gap-12">
-                    <div>
-                        <p class="text-5xl font-bold text-accent mb-2">87</p>
-                        <p class="text-xs tracking-[0.2em] text-zinc-500 uppercase font-semibold">Projects Delivered</p>
-                    </div>
-                    <div>
-                        <p class="text-5xl font-bold text-accent mb-2">42</p>
-                        <p class="text-xs tracking-[0.2em] text-zinc-500 uppercase font-semibold">Happy Clients</p>
-                    </div>
-                    <div>
-                        <p class="text-5xl font-bold text-accent mb-2">14</p>
-                        <p class="text-xs tracking-[0.2em] text-zinc-500 uppercase font-semibold">Countries</p>
-                    </div>
-                </div>
-            </div>
-            <div class="relative">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" alt="Team member" class="rounded-[2.5rem] w-full max-w-md mx-auto aspect-[4/5] object-cover border border-white/10">
-                <div class="absolute bottom-8 -right-4 lg:-right-8 bg-black border border-white/10 p-6 rounded-3xl shadow-2xl backdrop-blur-xl">
-                    <div class="flex items-center gap-2 mb-2">
-                        <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-                        <span class="text-xs uppercase tracking-widest font-bold text-zinc-400">Now Booking</span>
-                    </div>
-                    <p class="text-2xl font-bold">Q1 2025<br>Campaigns</p>
+                <img src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-40">
+                <div class="relative z-10 p-8">
+                    <h3 class="text-2xl font-bold mb-6">Product Photography</h3>
+                    <a href="project-detail.html" class="bg-white/10 px-4 py-2 rounded-full hover:bg-white/20 transition backdrop-blur text-xs">VIEW CASE STUDY</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-white/10">
-        <div class="text-center mb-16">
-            <p class="text-accent text-sm tracking-[0.2em] font-bold mb-3 uppercase">Testimonials</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-surface p-8 rounded-3xl border border-white/5 flex flex-col justify-between min-h-[300px]">
-                <div>
-                    <i class="fa-solid fa-quote-left text-3xl text-accent/50 mb-6"></i>
-                    <p class="text-lg leading-relaxed text-zinc-200">"RM Media transformed our brand story into a visual masterpiece. Their videography work exceeded all expectations."</p>
-                </div>
-                <div class="mt-8">
-                    <p class="font-bold">Sarah Chen</p>
-                    <p class="text-sm text-zinc-500">CEO, Lumina Tech</p>
-                </div>
-            </div>
-            <div class="bg-surface p-8 rounded-3xl border border-white/5 flex flex-col justify-between min-h-[300px]">
-                <div>
-                    <i class="fa-solid fa-quote-left text-3xl text-accent/50 mb-6"></i>
-                    <p class="text-lg leading-relaxed text-zinc-200">"The photography for our campaign was absolutely stunning. Professional, creative, and delivered on time."</p>
-                </div>
-                <div class="mt-8">
-                    <p class="font-bold">Marcus Rodriguez</p>
-                    <p class="text-sm text-zinc-500">Marketing Director, Verve Fashion</p>
-                </div>
-            </div>
-            <div class="bg-surface p-8 rounded-3xl border border-white/5 flex flex-col justify-between min-h-[300px]">
-                <div>
-                    <i class="fa-solid fa-quote-left text-3xl text-accent/50 mb-6"></i>
-                    <p class="text-lg leading-relaxed text-zinc-200">"Working with their web team was a game changer. Our new site increased conversions by 180%."</p>
-                </div>
-                <div class="mt-8">
-                    <p class="font-bold">Elena Petrova</p>
-                    <p class="text-sm text-zinc-500">Founder, Nova Studios</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
-        <div class="text-center mb-16">
-            <p class="text-accent text-sm tracking-[0.2em] font-bold mb-3 uppercase">Start Something Great</p>
-            <h2 class="text-5xl font-bold mb-4">Let's Work Together</h2>
-            <p class="text-zinc-400">Tell us about your project. We reply within 48 hours.</p>
-        </div>
-
-        <form class="space-y-6">
+    <section id="contact" class="py-24 px-6 max-w-4xl mx-auto border-t border-white/10">
+        <h2 class="text-center text-5xl font-bold mb-12">Let's Work Together</h2>
+        <form action="https://formspree.io/f/your-id" method="POST" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-xs uppercase tracking-widest text-zinc-500 font-semibold mb-2">Your Name</label>
-                    <input type="text" placeholder="Alex Rivera" class="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-accent transition text-white">
-                </div>
-                <div>
-                    <label class="block text-xs uppercase tracking-widest text-zinc-500 font-semibold mb-2">Email Address</label>
-                    <input type="email" placeholder="you@company.com" class="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-accent transition text-white">
-                </div>
+                <input type="text" name="name" placeholder="Your Name" required class="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 focus:border-accent outline-none text-white">
+                <input type="email" name="email" placeholder="Email Address" required class="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 focus:border-accent outline-none text-white">
             </div>
-            <div>
-                <label class="block text-xs uppercase tracking-widest text-zinc-500 font-semibold mb-2">Service Interested In</label>
-                <select class="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-accent transition text-white appearance-none">
-                    <option>Select a service...</option>
-                    <option>Web Design</option>
-                    <option>Photography</option>
-                    <option>Videography</option>
-                    <option>Audio Production</option>
-                </select>
-            </div>
-            <div>
-                <label class="block text-xs uppercase tracking-widest text-zinc-500 font-semibold mb-2">Tell us about your project</label>
-                <textarea rows="4" placeholder="We are looking for a photographer for our upcoming product launch in March..." class="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 focus:outline-none focus:border-accent transition text-white resize-none"></textarea>
-            </div>
-            <button class="w-full bg-accent hover:bg-accent/80 text-white font-bold py-4 rounded-xl transition flex justify-center items-center gap-2">
-                SEND MESSAGE <i class="fa-regular fa-envelope"></i>
-            </button>
+            <textarea name="message" rows="4" placeholder="Tell us about your project" class="w-full bg-surface border border-white/10 rounded-xl px-5 py-4 focus:border-accent outline-none text-white"></textarea>
+            <button type="submit" class="w-full bg-accent hover:bg-accent/80 text-white font-bold py-4 rounded-xl transition">SEND MESSAGE</button>
         </form>
-
-        <div class="mt-20 pt-10 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-surface rounded-full flex items-center justify-center border border-white/5">
-                    <i class="fa-solid fa-phone text-zinc-400"></i>
-                </div>
-                <div>
-                    <p class="text-xs text-zinc-500 uppercase tracking-widest mb-1">Phone</p>
-                    <p class="font-semibold">(773) 627-0657</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <div class="w-12 h-12 bg-surface rounded-full flex items-center justify-center border border-white/5">
-                    <i class="fa-regular fa-envelope text-zinc-400"></i>
-                </div>
-                <div>
-                    <p class="text-xs text-zinc-500 uppercase tracking-widest mb-1">Email</p>
-                    <p class="font-semibold text-sm">info@robynmonroemedia.com</p>
-                </div>
-            </div>
-            <div class="flex flex-col justify-center">
-                <p class="text-xs text-zinc-500 uppercase tracking-widest mb-2">Chicago, IL</p>
-                <p class="text-sm font-semibold mb-4">Available for projects worldwide</p>
-                <div class="flex gap-4">
-                    <a href="#" class="text-zinc-400 hover:text-white transition"><i class="fa-brands fa-instagram text-xl"></i></a>
-                    <a href="#" class="text-zinc-400 hover:text-white transition"><i class="fa-brands fa-twitter text-xl"></i></a>
-                    <a href="#" class="text-zinc-400 hover:text-white transition"><i class="fa-brands fa-linkedin text-xl"></i></a>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <footer class="border-t border-white/10 py-8 px-6 bg-black">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
-            <p>&copy; 2026 RM Media. All Rights Reserved.</p>
-            <div class="flex gap-6">
-                <a href="#" class="hover:text-white transition">www.thergmedia.com</a>
-                <a href="#" class="hover:text-white transition">Privacy</a>
-                <a href="#" class="hover:text-white transition">Legal</a>
-            </div>
-            <p class="uppercase tracking-widest">Made with passion in Chicago</p>
+    <footer class="border-t border-white/10 py-8 px-6 bg-black text-center text-xs text-zinc-500">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://instagram.com/yourprofile" target="_blank" class="hover:text-white"><i class="fa-brands fa-instagram text-xl"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" class="hover:text-white"><i class="fa-brands fa-linkedin text-xl"></i></a>
         </div>
+        <p>&copy; 2026 RM Media. All Rights Reserved.</p>
     </footer>
 
 </body>
