@@ -3,119 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RM Media | Premium Media & Design</title>
+    <title>RM Media | Premium Creative Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
     <style>
-        :root {
-            --background: #0a0a0a;
-            --accent: #8b5cf6;
-        }
-        body {
-            background-color: var(--background);
-            color: #ffffff;
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            overflow-x: hidden;
-        }
-        .bg-accent { background-color: var(--accent) !important; }
-        .text-accent { color: var(--accent) !important; }
-        .hover\:text-purple-400:hover { color: #a78bfa !important; }
+        :root { --background: #0a0a0a; --accent: #8b5cf6; }
+        body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
         html { scroll-behavior: smooth; }
+        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%); }
     </style>
 </head>
 <body class="antialiased">
-
     <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
                     <span class="text-white font-bold text-xl tracking-tighter">RM</span>
                 </div>
-                <div>
-                    <div class="font-semibold text-2xl tracking-tighter">RM MEDIA</div>
-                    <div class="text-[10px] text-white/50 -mt-1 uppercase">Est 2018</div>
-                </div>
+                <span class="font-bold text-2xl tracking-tighter uppercase">RM Media</span>
             </a>
-
-            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-medium">
+            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold">
                 <a href="#services" class="hover:text-purple-400 transition">Services</a>
                 <a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
                 <a href="about.html" class="hover:text-purple-400 transition">About</a>
-                <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
+                <a href="contact.html" class="hover:text-purple-400 transition text-purple-400">Contact</a>
             </div>
-
-            <div class="hidden md:flex items-center gap-6">
-                <a href="tel:7736270657" class="flex items-center gap-2 text-sm hover:text-purple-400">
-                    <i class="fa-solid fa-phone"></i> (773) 627-0657
-                </a>
-                <a href="contact.html" class="px-6 py-2.5 bg-white text-black rounded-full text-sm font-semibold hover:bg-purple-500 hover:text-white transition-all text-center">
-                    LET'S CREATE
-                </a>
-            </div>
+            <a href="contact.html" class="hidden md:block px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold hover:bg-purple-500 hover:text-white transition-all uppercase tracking-widest">Let's Create</a>
         </div>
     </nav>
 
     <section class="relative min-h-screen flex items-center justify-center text-center px-6">
         <div class="absolute inset-0 z-0">
-            <img src="images/Hero.jpg" alt="Studio" class="w-full h-full object-cover opacity-40">
-            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black"></div>
+            <img src="images/Hero.jpg" alt="Creative Studio" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 hero-gradient"></div>
         </div>
-
-        <div class="relative z-10 max-w-4xl">
-            <div class="inline-block px-5 py-1.5 rounded-full border border-white/20 text-[10px] tracking-[3px] bg-white/5 backdrop-blur-md mb-8 uppercase">
-                Chicago Based Creative Studio
-            </div>
-            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-none mb-8">
-                WE TELL <br> YOUR STORY
-            </h1>
-            <p class="max-w-md mx-auto text-lg text-white/70 mb-12">
-                Premium photography, videography, web design and audio production. Creating unforgettable visual experiences since 2018.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="portfolio.html" class="px-10 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-purple-600 hover:text-white transition text-center">
-                    VIEW OUR WORK
-                </a>
-                <a href="contact.html" class="px-10 py-4 border border-white/40 rounded-2xl font-medium hover:bg-white/5 transition text-center">
-                    START A PROJECT
-                </a>
+        <div class="relative z-10 max-w-5xl">
+            <h1 class="text-7xl md:text-9xl font-bold tracking-tighter leading-[0.9] mb-8 uppercase">We Tell<br>Your Story</h1>
+            <p class="max-w-xl mx-auto text-lg text-white/60 mb-12 leading-relaxed">Premium photography, videography, and digital design for visionary brands. Based in Chicago, serving the world.</p>
+            <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                <a href="portfolio.html" class="px-12 py-5 bg-white text-black rounded-2xl font-bold hover:bg-purple-600 hover:text-white transition uppercase tracking-widest text-sm">View Our Work</a>
+                <a href="contact.html" class="px-12 py-5 border border-white/20 rounded-2xl font-bold hover:bg-white/10 transition uppercase tracking-widest text-sm">Start A Project</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="max-w-7xl mx-auto px-6 py-24">
-        <div class="text-center mb-16">
-            <div class="text-purple-400 text-sm tracking-[4px] font-medium mb-3">WHAT WE DO BEST</div>
-            <h2 class="text-5xl font-bold tracking-tight">Signature Services</h2>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl hover:border-purple-500/50 transition">
-                <i class="fa-solid fa-globe text-3xl text-purple-400 mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Web Design</h3>
-                <p class="text-white/60 text-sm">Stunning, responsive websites that capture your brand and drive results.</p>
-            </div>
-            <div class="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl hover:border-purple-500/50 transition">
-                <i class="fa-solid fa-video text-3xl text-purple-400 mb-6"></i>
-                <h3 class="text-2xl font-bold mb-4">Videography</h3>
-                <p class="text-white/60 text-sm">Cinematic video production, corporate films, and post-production excellence.</p>
-            </div>
-            <div class="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl hover:border-purple-500/50 transition">
-                <i class="fa-solid fa-camera text-3xl text-purple-400 mb-6"></i>
+    <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="p-10 bg-zinc-900/50 border border-white/10 rounded-[2rem] hover:border-purple-500/50 transition-all group">
+                <i class="fa-solid fa-camera text-4xl text-purple-500 mb-8 group-hover:scale-110 transition"></i>
                 <h3 class="text-2xl font-bold mb-4">Photography</h3>
-                <p class="text-white/60 text-sm">Professional services including portraits, events, and commercial campaigns.</p>
+                <p class="text-white/50 text-sm leading-relaxed">High-end commercial, portrait, and lifestyle captures.</p>
             </div>
-            <div class="bg-zinc-900/50 border border-white/10 p-8 rounded-3xl hover:border-purple-500/50 transition">
-                <i class="fa-solid fa-microphone-lines text-3xl text-purple-400 mb-6"></i>
+            <div class="p-10 bg-zinc-900/50 border border-white/10 rounded-[2rem] hover:border-purple-500/50 transition-all group">
+                <i class="fa-solid fa-video text-4xl text-purple-500 mb-8 group-hover:scale-110 transition"></i>
+                <h3 class="text-2xl font-bold mb-4">Videography</h3>
+                <p class="text-white/50 text-sm leading-relaxed">Cinematic storytelling and professional post-production.</p>
+            </div>
+            <div class="p-10 bg-zinc-900/50 border border-white/10 rounded-[2rem] hover:border-purple-500/50 transition-all group">
+                <i class="fa-solid fa-code text-4xl text-purple-500 mb-8 group-hover:scale-110 transition"></i>
+                <h3 class="text-2xl font-bold mb-4">Web Design</h3>
+                <p class="text-white/50 text-sm leading-relaxed">Custom digital experiences built for performance.</p>
+            </div>
+            <div class="p-10 bg-zinc-900/50 border border-white/10 rounded-[2rem] hover:border-purple-500/50 transition-all group">
+                <i class="fa-solid fa-music text-4xl text-purple-500 mb-8 group-hover:scale-110 transition"></i>
                 <h3 class="text-2xl font-bold mb-4">Audio</h3>
-                <p class="text-white/60 text-sm">High-quality recording, sound design, and podcast production.</p>
+                <p class="text-white/50 text-sm leading-relaxed">Precision sound design and audio engineering.</p>
             </div>
         </div>
     </section>
 
-    <footer class="border-t border-white/10 py-12 text-center text-xs text-white/40">
-        <p>© 2026 RM Media. Made with passion in Chicago.</p>
+    <footer class="py-12 text-center text-[10px] uppercase tracking-[4px] text-white/30 border-t border-white/5">
+        © 2026 RM Media Studio — Chicago, IL
     </footer>
 </body>
 </html>
