@@ -1,69 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | RM Media</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
-        .nav-blur { background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px); }
-        .hero-gradient { background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%); }
-        html { scroll-behavior: smooth; }
-    </style>
-</head>
-<body class="antialiased">
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
-                    <span class="text-white font-bold text-xl tracking-tighter">RM</span>
-                </div>
-                <span class="font-bold text-2xl tracking-tighter uppercase">RM Media</span>
-            </a>
-            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold">
-                <a href="index.html#services" class="hover:text-purple-400 transition">Services</a>
-                <a href="portfolio.html" class="hover:text-purple-400 transition text-purple-400">Portfolio</a>
-                <a href="about.html" class="hover:text-purple-400 transition">About</a>
-                <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
-            </div>
-            <a href="contact.html" class="hidden md:block px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold hover:bg-purple-500 hover:text-white transition-all uppercase tracking-widest text-center">Let's Create</a>
-        </div>
-    </nav>
-
-    <section class="max-w-7xl mx-auto pt-40 pb-20 px-6">
-        <div class="mb-20">
-            <h1 class="text-7xl font-bold tracking-tighter mb-4">Selected Works</h1>
-            <p class="text-white/40 uppercase tracking-[4px] text-xs">Photography & Videography</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 mb-32">
-            <a href="urban-cinematics.html" class="group relative rounded-[2.5rem] overflow-hidden aspect-video bg-zinc-900 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent p-10 flex flex-col justify-end">
-                    <p class="text-purple-500 text-xs font-bold uppercase tracking-[3px] mb-2">Videography</p>
-                    <h3 class="text-3xl font-bold">Urban Cinematics</h3>
-                    <div class="text-[10px] text-white/50 font-bold uppercase tracking-widest mt-2">Cinematography • Drone • Edit</div>
-                </div>
-            </a>
-            <a href="studio-portraits.html" class="group relative rounded-[2.5rem] overflow-hidden aspect-video bg-zinc-900 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent p-10 flex flex-col justify-end">
-                    <p class="text-purple-500 text-xs font-bold uppercase tracking-[3px] mb-2">Photography</p>
-                    <h3 class="text-3xl font-bold">Studio Portraits</h3>
-                    <div class="text-[10px] text-white/50 font-bold uppercase tracking-widest mt-2">Portraits • Retouch • Lighting</div>
-                </div>
-            </a>
-        </div>
-
-        <div class="mb-12">
+<div class="mb-12">
             <p class="text-white/40 uppercase tracking-[4px] text-xs mb-4">Digital Design</p>
             <h2 class="text-5xl font-bold tracking-tighter">Websites & Platforms</h2>
         </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-2 gap-6 mb-32">
             <a href="e-commerce.html" class="bg-zinc-900/50 border border-white/10 p-10 rounded-[2.5rem] hover:bg-zinc-900 transition group flex flex-col justify-between">
                 <div>
                     <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-purple-600 transition">
@@ -81,16 +21,26 @@
                         <i class="fa-solid fa-rocket text-xl"></i>
                     </div>
                     <h4 class="text-2xl font-bold mb-3">Brick and Mortar</h4>
-                    <p class="text-white/50 text-sm mb-8 leading-relaxed">Bold, high-performance landing page featuring modern scroll animations.</p>
+                    <p class="text-white/50 text-sm mb-8 leading-relaxed">High-performance landing page for local business discovery and booking.</p>
                 </div>
                 <div class="text-[10px] text-purple-400 font-bold uppercase tracking-widest">Tailwind CSS • JavaScript</div>
             </a>
         </div>
-    </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <a href="contact.html" class="inline-block px-10 py-4 bg-white text-black rounded-2xl font-bold hover:bg-purple-600 hover:text-white transition uppercase tracking-widest text-xs mb-8 text-center">Work with Us</a>
-        <p class="text-[10px] text-white/20 uppercase tracking-[4px]">© 2026 RM Media Studio — Chicago, IL</p>
-    </footer>
-</body>
-</html>
+        <div class="mb-12">
+            <p class="text-white/40 uppercase tracking-[4px] text-xs mb-4">Sound & Voice</p>
+            <h2 class="text-5xl font-bold tracking-tighter">Audio Production</h2>
+        </div>
+
+        <div class="grid md:grid-cols-1 gap-6">
+            <a href="audio-production.html" class="bg-zinc-900/50 border border-white/10 p-10 rounded-[2.5rem] hover:bg-zinc-900 transition group flex items-center gap-8">
+                <div class="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-purple-600 transition shrink-0">
+                    <i class="fa-solid fa-microphone-lines text-3xl"></i>
+                </div>
+                <div>
+                    <h4 class="text-2xl font-bold mb-2">Podcast & Sound Design</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">Professional vocal processing, mixing, and original scoring for digital media.</p>
+                    <div class="text-[10px] text-purple-400 font-bold uppercase tracking-widest mt-4">Mixing • Mastering • Voiceover</div>
+                </div>
+            </a>
+        </div>
