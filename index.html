@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RM Media | Premium Media & Design</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
-
     <style>
         :root {
             --background: #0a0a0a;
             --accent: #8b5cf6;
         }
         body {
+            background-color: var(--background);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
         .bg-accent { background-color: var(--accent) !important; }
         .text-accent { color: var(--accent) !important; }
         .hover\:text-purple-400:hover { color: #a78bfa !important; }
-        
-        /* Smooth scrolling */
         html { scroll-behavior: smooth; }
     </style>
 </head>
@@ -28,7 +30,7 @@
 
     <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <div class="flex items-center gap-3">
+            <a href="index.html" class="flex items-center gap-3">
                 <div class="w-9 h-9 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
                     <span class="text-white font-bold text-xl tracking-tighter">RM</span>
                 </div>
@@ -36,23 +38,22 @@
                     <div class="font-semibold text-2xl tracking-tighter">RM MEDIA</div>
                     <div class="text-[10px] text-white/50 -mt-1 uppercase">Est 2018</div>
                 </div>
-            </div>
+            </a>
 
             <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-medium">
-    <a href="#services" class="hover:text-purple-400 transition">Services</a>
-<a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
-<a href="about.html" class="hover:text-purple-400 transition">About</a>
-<a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
-</div>
+                <a href="#services" class="hover:text-purple-400 transition">Services</a>
+                <a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
+                <a href="about.html" class="hover:text-purple-400 transition">About</a>
+                <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
             </div>
 
             <div class="hidden md:flex items-center gap-6">
                 <a href="tel:7736270657" class="flex items-center gap-2 text-sm hover:text-purple-400">
                     <i class="fa-solid fa-phone"></i> (773) 627-0657
                 </a>
-                <a href="contact.html" class="px-6 py-2.5 bg-white text-black rounded-full text-sm font-semibold hover:bg-purple-500 hover:text-white transition-all text-center">
-    LET'S CREATE
-</a>
+                <a href="contact.html" class="px-6 py-2.5 bg-white text-black rounded-full text-sm font-semibold hover:bg-purple-500 hover:text-white transition-all">
+                    LET'S CREATE
+                </a>
             </div>
         </div>
     </nav>
@@ -74,13 +75,13 @@
                 Premium photography, videography, web design and audio production. Creating unforgettable visual experiences since 2018.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-    <a href="portfolio.html" class="px-10 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-purple-600 hover:text-white transition">
-        VIEW OUR WORK
-    </a>
-    <a href="contact.html" class="px-10 py-4 border border-white/40 rounded-2xl font-medium hover:bg-white/5 transition">
-        START A PROJECT
-    </a>
-</div>
+                <a href="portfolio.html" class="px-10 py-4 bg-white text-black rounded-2xl font-semibold hover:bg-purple-600 hover:text-white transition">
+                    VIEW OUR WORK
+                </a>
+                <a href="contact.html" class="px-10 py-4 border border-white/40 rounded-2xl font-medium hover:bg-white/5 transition">
+                    START A PROJECT
+                </a>
+            </div>
         </div>
     </section>
 
@@ -116,6 +117,5 @@
     <footer class="border-t border-white/10 py-12 text-center text-xs text-white/40">
         <p>© 2026 RM Media. Made with passion in Chicago.</p>
     </footer>
-
 </body>
 </html>
