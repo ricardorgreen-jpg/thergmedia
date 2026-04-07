@@ -5,35 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | RM Media</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .nav-blur { background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(10px); }
     </style>
 </head>
 <body class="antialiased">
-    <nav class="p-6 border-b border-white/10 flex justify-between items-center">
-        <a href="index.html" class="font-bold text-xl uppercase tracking-tighter">RM Media</a>
-        <a href="index.html" class="text-xs uppercase tracking-widest hover:text-purple-400">Back to Home</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="index.html" class="font-bold text-xl uppercase tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center text-sm">RM</div>
+                RM Media
+            </a>
+            <a href="index.html" class="text-[10px] uppercase tracking-[3px] font-bold hover:text-purple-400 transition">Back to Home</a>
+        </div>
     </nav>
 
-    <section class="max-w-7xl mx-auto py-24 px-6">
-        <h1 class="text-6xl font-bold mb-16 tracking-tighter">Selected Works</h1>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="group relative rounded-[2rem] overflow-hidden aspect-video bg-zinc-900">
-                <img src="https://images.unsplash.com/photo-1492691523567-62744541731d?auto=format&fit=crop&w=1000" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black p-10 flex flex-col justify-end">
-                    <p class="text-purple-400 text-xs font-bold uppercase tracking-[3px] mb-2">Videography</p>
+    <section class="max-w-7xl mx-auto py-32 px-6">
+        <div class="mb-20">
+            <h1 class="text-7xl font-bold tracking-tighter mb-4">Selected Works</h1>
+            <p class="text-white/40 uppercase tracking-[4px] text-xs">Photography & Videography</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-32">
+            <div class="group relative rounded-[2.5rem] overflow-hidden aspect-video bg-zinc-900 border border-white/5">
+                <img src="https://images.unsplash.com/photo-1492691523567-62744541731d?auto=format&fit=crop&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent p-10 flex flex-col justify-end">
+                    <p class="text-purple-500 text-xs font-bold uppercase tracking-[3px] mb-2">Videography</p>
                     <h3 class="text-3xl font-bold">Urban Cinematics</h3>
                 </div>
             </div>
-            <div class="group relative rounded-[2rem] overflow-hidden aspect-video bg-zinc-900">
-                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1000" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black p-10 flex flex-col justify-end">
-                    <p class="text-purple-400 text-xs font-bold uppercase tracking-[3px] mb-2">Photography</p>
+            <div class="group relative rounded-[2.5rem] overflow-hidden aspect-video bg-zinc-900 border border-white/5">
+                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent p-10 flex flex-col justify-end">
+                    <p class="text-purple-500 text-xs font-bold uppercase tracking-[3px] mb-2">Photography</p>
                     <h3 class="text-3xl font-bold">Studio Portraits</h3>
                 </div>
             </div>
         </div>
-    </section>
-</body>
-</html>
+
+        <div class="mb-12">
+            <p class="text-white/40 uppercase tracking-[4px] text-xs mb-4">Digital Design</p>
+            <h2 class="text-5xl font-bold tracking-tighter">Websites & Platforms</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-zinc-900/50 border border-white/10 p-8 rounded-[2rem] hover:bg-zinc-900 transition group">
+                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition">
+                    <i class="fa-solid fa-laptop-code text-xl"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">E-Commerce Store</h4>
+                <p class="text-white/50 text-sm mb-6">Custom Shopify integration with a focus on high-conversion minimalist design.</p>
+                <div class="text-[10px] text-purple-400 font-bold uppercase tracking-widest">UI/UX • React • Vite</div>
+            </div>
+
+            <div class="bg-zinc-900/50 border border-white/10 p-8 rounded-[2rem] hover:bg-zinc-900 transition group">
+                <div class="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-600 transition">
+                    <i class="fa-solid fa-rocket text-xl"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Startup Landing Page</h4>
+                <p class="text-white/50 text-sm mb-6">Bold, high-performance landing page featuring modern scroll animations.</p>
+                <div class="text-[10px] text-purple-400 font-bold uppercase tracking-widest">Tailwind CSS • JavaScript</div>
+            </div>
+
+            <div class="
