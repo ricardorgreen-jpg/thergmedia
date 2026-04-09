@@ -3,92 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | RM Media</title>
+    <title>Studio Portraits | RM Media</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --background: #0a0a0a; --accent: #8b5cf6; }
         body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
-        .nav-blur { background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(10px); }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="antialiased">
-    <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3">
                 <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
-                    <span class="text-white font-bold text-xl">RM</span>
+                    <span class="text-white font-bold text-xl tracking-tighter">RM</span>
                 </div>
                 <span class="font-bold text-2xl tracking-tighter uppercase">RM Media</span>
             </a>
-            <div class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-semibold">
-                <a href="index.html" class="hover:text-purple-400 transition">Home</a>
-                <a href="portfolio.html" class="text-purple-400">Portfolio</a>
+            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold">
+                <a href="index.html#services" class="hover:text-purple-400 transition">Services</a>
+                <a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
                 <a href="about.html" class="hover:text-purple-400 transition">About</a>
                 <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
             </div>
+            <a href="contact.html" class="px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold hover:bg-purple-500 hover:text-white transition-all uppercase tracking-widest">Let's Create</a>
         </div>
     </nav>
 
-    <section class="max-w-7xl mx-auto pt-40 pb-20 px-6">
-        <h1 class="text-7xl font-bold tracking-tighter mb-20">Selected Works</h1>
-
-        <div class="mb-12">
-            <p class="text-purple-500 text-xs font-bold uppercase tracking-[4px] mb-2">Visual Storytelling</p>
-            <h2 class="text-4xl font-bold mb-10">Video & Photo</h2>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8 mb-32">
-            <a href="urban-cinematics.html" class="group relative rounded-[2.5rem] overflow-hidden aspect-video bg-zinc-900 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black p-10 flex flex-col justify-end">
-                    <h3 class="text-3xl font-bold">Urban Cinematics</h3>
-                    <p class="text-white/50 text-sm mt-2">Videography • Chicago</p>
-                </div>
-            </a>
-            <a href="studio-portraits.html" class="group relative rounded-[2.5rem] overflow-hidden aspect-video bg-zinc-900 border border-white/5">
-                <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=1200" class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black p-10 flex flex-col justify-end">
-                    <h3 class="text-3xl font-bold">Studio Portraits</h3>
-                    <p class="text-white/50 text-sm mt-2">Photography • Lighting</p>
-                </div>
-            </a>
-        </div>
-
-        <div class="mb-12">
-            <p class="text-purple-500 text-xs font-bold uppercase tracking-[4px] mb-2">Digital Design</p>
-            <h2 class="text-4xl font-bold mb-10">Websites & Platforms</h2>
-        </div>
-        <div class="grid md:grid-cols-2 gap-8 mb-32">
-            <a href="e-commerce.html" class="p-10 bg-zinc-900/50 border border-white/10 rounded-[2.5rem] hover:bg-zinc-900 transition group">
-                <div class="w-12 h-12 bg-purple-600 rounded-2xl flex items-center justify-center mb-8"><i class="fa-solid fa-cart-shopping"></i></div>
-                <h3 class="text-3xl font-bold mb-4">E-Commerce Store</h3>
-                <p class="text-white/50 leading-relaxed mb-6">Custom Shopify development for high-end lifestyle brands.</p>
-                <span class="text-xs font-bold uppercase tracking-widest text-purple-400">View Project →</span>
-            </a>
-            <a href="brick-and-mortar.html" class="p-10 bg-zinc-900/50 border border-white/10 rounded-[2.5rem] hover:bg-zinc-900 transition group">
-                <div class="w-12 h-12 bg-purple-600 rounded-2xl flex items-center justify-center mb-8"><i class="fa-solid fa-shop"></i></div>
-                <h3 class="text-3xl font-bold mb-4">Brick and Mortar</h3>
-                <p class="text-white/50 leading-relaxed mb-6">Localized landing pages and booking systems for physical stores.</p>
-                <span class="text-xs font-bold uppercase tracking-widest text-purple-400">View Project →</span>
-            </a>
-        </div>
-
-        <div class="mb-12">
-            <p class="text-purple-500 text-xs font-bold uppercase tracking-[4px] mb-2">Sound & Voice</p>
-            <h2 class="text-4xl font-bold mb-10">Audio Production</h2>
-        </div>
-        <a href="audio-production.html" class="p-10 bg-zinc-900/50 border border-white/10 rounded-[2.5rem] hover:bg-zinc-900 transition flex items-center gap-10 group">
-            <div class="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center shrink-0"><i class="fa-solid fa-microphone-lines text-3xl"></i></div>
-            <div>
-                <h3 class="text-3xl font-bold mb-2">Podcast & Sound Design</h3>
-                <p class="text-white/50">Professional mixing, mastering, and vocal processing.</p>
-            </div>
-        </a>
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center border-b border-white/5">
+        <div class="text-purple-400 text-sm tracking-[4px] font-medium mb-3 uppercase">Photography</div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase">Studio Portraits</h1>
     </section>
 
-    <footer class="py-20 text-center border-t border-white/5">
-        <p class="text-[10px] text-white/20 uppercase tracking-[4px]">© 2026 RM Media Studio</p>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-1.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-10.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-11.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-14.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-6.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-4.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-9.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-9.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-10.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-11.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+            <div class="rounded-3xl overflow-hidden aspect-[4/5] bg-zinc-900 border border-white/10 group">
+                <img src="images/portrait-12.jpg" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-[10px] uppercase tracking-[4px] text-white/30 border-t border-white/5">
+        © 2026 RM Media Studio — Chicago, IL
     </footer>
 </body>
 </html>
