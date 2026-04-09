@@ -5,38 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Urban Cinematics | RM Media</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; }
+        :root { --background: #0a0a0a; --accent: #8b5cf6; }
+        body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="antialiased">
-    <nav class="p-6 border-b border-white/10 flex justify-between items-center">
-        <a href="index.html" class="font-bold text-xl uppercase tracking-tighter">RM Media</a>
-        <a href="portfolio.html" class="text-xs uppercase tracking-widest hover:text-purple-400">Back to Portfolio</a>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-xl tracking-tighter">RM</span>
+                </div>
+                <span class="font-bold text-2xl tracking-tighter uppercase">RM Media</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold">
+                <a href="index.html#services" class="hover:text-purple-400 transition">Services</a>
+                <a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
+                <a href="about.html" class="hover:text-purple-400 transition">About</a>
+                <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
+            </div>
+            <a href="contact.html" class="px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold hover:bg-purple-500 hover:text-white transition-all uppercase tracking-widest">Let's Create</a>
+        </div>
     </nav>
 
-    <section class="max-w-5xl mx-auto py-24 px-6">
-        <div class="mb-12">
-            <p class="text-purple-500 text-xs font-bold uppercase tracking-[3px] mb-4">Videography Case Study</p>
-            <h1 class="text-7xl font-bold tracking-tighter mb-8">Urban Cinematics</h1>
-        </div>
-        
-        <div class="rounded-[3rem] overflow-hidden mb-16 aspect-video bg-zinc-900">
-            <img src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=1200" class="w-full h-full object-cover">
-        </div>
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center border-b border-white/5">
+        <div class="text-purple-400 text-sm tracking-[4px] font-medium mb-3 uppercase">Videography</div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase">Urban Cinematics</h1>
+        <p class="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">High-energy visuals, cinematic color grading, and professional storytelling. Experience our latest film projects.</p>
+    </section>
 
-        <div class="grid md:grid-cols-3 gap-12 text-white/60">
-            <div class="md:col-span-2">
-                <h2 class="text-2xl font-bold text-white mb-4">The Vision</h2>
-                <p class="mb-6">Capturing the raw energy of the Chicago skyline through 4K drone cinematography and high-speed ground tracking. This project focused on the intersection of architecture and movement.</p>
-                <p>We utilized a minimalist editing style to let the natural light and urban textures drive the narrative.</p>
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <div class="group">
+                <div class="rounded-[2rem] overflow-hidden bg-zinc-900 border border-white/10 aspect-video mb-6 group-hover:border-purple-500/50 transition-all duration-500">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-xl font-bold uppercase tracking-tight">Project Title 01</h3>
+                <p class="text-white/40 text-xs uppercase tracking-widest mt-2">Cinematography / Color Grade</p>
             </div>
-            <div class="space-y-6">
-                <div><p class="text-white font-bold">Role</p><p class="text-sm">Director / Lead Editor</p></div>
-                <div><p class="text-white font-bold">Gear</p><p class="text-sm">RED Komodo / DJI Mavic 3 Pro</p></div>
+
+            <div class="group">
+                <div class="rounded-[2rem] overflow-hidden bg-zinc-900 border border-white/10 aspect-video mb-6 group-hover:border-purple-500/50 transition-all duration-500">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-xl font-bold uppercase tracking-tight">Project Title 02</h3>
+                <p class="text-white/40 text-xs uppercase tracking-widest mt-2">Commercial / Directing</p>
             </div>
+
+            <div class="group">
+                <div class="rounded-[2rem] overflow-hidden bg-zinc-900 border border-white/10 aspect-video mb-6 group-hover:border-purple-500/50 transition-all duration-500">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-xl font-bold uppercase tracking-tight">Project Title 03</h3>
+                <p class="text-white/40 text-xs uppercase tracking-widest mt-2">Music Video / Edit</p>
+            </div>
+
+            <div class="group">
+                <div class="rounded-[2rem] overflow-hidden bg-zinc-900 border border-white/10 aspect-video mb-6 group-hover:border-purple-500/50 transition-all duration-500">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <h3 class="text-xl font-bold uppercase tracking-tight">Project Title 04</h3>
+                <p class="text-white/40 text-xs uppercase tracking-widest mt-2">Corporate / Visual Effects</p>
+            </div>
+
         </div>
     </section>
+
+    <footer class="py-12 text-center text-[10px] uppercase tracking-[4px] text-white/30 border-t border-white/5">
+        © 2026 RM Media Studio — Chicago, IL
+    </footer>
 </body>
 </html>
