@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Design & E-Commerce | RM Media</title>
+    <title>Web Design & Development | RM Media</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,8 +11,9 @@
         :root { --background: #0a0a0a; --accent: #8b5cf6; }
         body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
         html { scroll-behavior: smooth; }
-        .browser-mockup { background: #1a1a1a; border-radius: 20px; border: 1px border-white/10; overflow: hidden; }
+        .browser-mockup { background: #1a1a1a; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; position: relative; }
         .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
     </style>
 </head>
 <body class="antialiased">
@@ -27,59 +28,85 @@
             </a>
             <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold">
                 <a href="index.html#services" class="hover:text-purple-400 transition">Services</a>
-                <a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
-                <a href="about.html" class="hover:text-purple-400 transition">About</a>
+                <a href="portfolio.html" class="hover:text-purple-400 transition text-purple-400">Portfolio</a>
                 <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
             </div>
             <a href="contact.html" class="px-6 py-2.5 bg-white text-black rounded-full text-xs font-bold hover:bg-purple-500 hover:text-white transition-all uppercase tracking-widest">Let's Create</a>
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center border-b border-white/5">
         <div class="text-purple-400 text-sm tracking-[4px] font-medium mb-3 uppercase">Digital Architecture</div>
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase">Web Design</h1>
-        <p class="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">High-performance digital experiences built with React, Tailwind, and custom Shopify solutions. We build for conversion and speed.</p>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase leading-none">Web Design <br>& Development</h1>
+        <p class="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">High-performance React & Tailwind builds. We specialize in converting local traffic into loyal customers.</p>
     </section>
 
     <section class="py-24 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col gap-32">
             
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="browser-mockup border border-white/10 shadow-2xl">
-                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2">
-                        <span class="dot bg-[#ff5f56]"></span>
-                        <span class="dot bg-[#ffbd2e]"></span>
-                        <span class="dot bg-[#27c93f]"></span>
+                <a href="https://ricardorgreen-jpg.github.io/GentleKutz/" target="_blank" class="browser-mockup block group transition-all duration-500 hover:border-purple-500/50 shadow-2xl">
+                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
+                        <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
+                        <span class="text-[10px] text-white/30 ml-2 uppercase tracking-widest font-mono">ricardorgreen.github.io/GentleKutz</span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1200&auto=format&fit=crop" alt="E-commerce Project" class="w-full h-auto opacity-80">
+                    <div class="overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80 group-hover:opacity-100">
+                    </div>
+                </a>
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">GentleKutz</h2>
+                    <p class="text-purple-400 text-sm font-bold uppercase tracking-widest mb-6">Barbering & Lifestyle Platform</p>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8">A custom-coded solution for the modern grooming professional. Features a clean, high-contrast UI, mobile-optimized navigation, and direct integration with booking software to streamline client acquisition.</p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="px-4 py-2 glass-card rounded-full text-[10px] font-bold uppercase tracking-widest">HTML5 / CSS3</span>
+                        <span class="px-4 py-2 glass-card rounded-full text-[10px] font-bold uppercase tracking-widest">Tailwind CSS</span>
+                        <span class="px-4 py-2 glass-card rounded-full text-[10px] font-bold uppercase tracking-widest">UI/UX Design</span>
+                    </div>
+                    <a href="https://ricardorgreen-jpg.github.io/GentleKutz/" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full text-xs font-bold hover:bg-purple-500 hover:text-white transition-all uppercase tracking-widest">
+                        Launch Site <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="lg:order-last browser-mockup group border border-white/10 shadow-2xl">
+                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
+                        <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
+                        <span class="text-[10px] text-white/30 ml-2 uppercase tracking-widest font-mono">autoshop-concept.io</span>
+                    </div>
+                    <div class="overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition duration-700">
+                    </div>
                 </div>
                 <div>
-                    <h2 class="text-4xl font-bold tracking-tight mb-6 uppercase">RLG Store Custom Build</h2>
-                    <p class="text-white/60 text-lg leading-relaxed mb-8">A full-stack custom implementation focusing on reducing friction in the checkout process while maintaining a premium, editorial aesthetic. Built to scale with high-volume traffic.</p>
-                    <div class="flex flex-wrap gap-4 mb-10">
-                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Shopify / Liquid</span>
-                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">React / Vite</span>
-                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Tailwind CSS</span>
+                    <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">Automotive Systems</h2>
+                    <p class="text-purple-400 text-sm font-bold uppercase tracking-widest mb-6">Service & Repair Solutions</p>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8">Developed a rugged, industrial interface for local auto repair centers. Focused on conversion-heavy features like "Request a Quote" and service-specific diagnostic pages.</p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="px-4 py-2 glass-card rounded-full text-[10px] font-bold uppercase tracking-widest">React Framework</span>
+                        <span class="px-4 py-2 glass-card rounded-full text-[10px] font-bold uppercase tracking-widest">Lead Generation</span>
                     </div>
                 </div>
             </div>
 
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="lg:order-last browser-mockup border border-white/10 shadow-2xl">
-                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2">
-                        <span class="dot bg-[#ff5f56]"></span>
-                        <span class="dot bg-[#ffbd2e]"></span>
-                        <span class="dot bg-[#27c93f]"></span>
+                <div class="browser-mockup group border border-white/10 shadow-2xl">
+                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
+                        <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
+                        <span class="text-[10px] text-white/30 ml-2 uppercase tracking-widest font-mono">precision-tint.io</span>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Web Development" class="w-full h-auto opacity-80">
+                    <div class="overflow-hidden aspect-video">
+                        <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition duration-700">
+                    </div>
                 </div>
                 <div>
-                    <h2 class="text-4xl font-bold tracking-tight mb-6 uppercase">Central Landing Page</h2>
-                    <p class="text-white/60 text-lg leading-relaxed mb-8">Architected the current RM Media portfolio ecosystem. Optimized for mobile responsiveness and ultra-fast loading speeds using Supabase for back-end data management.</p>
-                    <div class="flex flex-wrap gap-4 mb-10">
-                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Supabase</span>
-                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">JavaScript</span>
-                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Tailwind</span>
+                    <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">Precision Tinting</h2>
+                    <p class="text-purple-400 text-sm font-bold uppercase tracking-widest mb-6">Visual & Performance Branding</p>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8">A high-end visual gallery designed to showcase film quality and heat-rejection data. Built to highlight the aesthetic and functional benefits of premium window tinting services.</p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="px-4 py-2 glass-card rounded-full text-[10px] font-bold uppercase tracking-widest">Interactive Gallery</span>
+                        <span class="px-4 py-2 glass-card rounded-full text-[10px] font-bold uppercase tracking-widest">SEO Optimized</span>
                     </div>
                 </div>
             </div>
