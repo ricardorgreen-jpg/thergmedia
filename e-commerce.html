@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Case Studies | RM Media</title>
+    <title>Web Development | RM Media</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root { --background: #0a0a0a; }
         body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
-        .browser-mockup { background: #1a1a1a; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; transition: all 0.5s ease; }
+        .browser-mockup { background: #1a1a1a; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); overflow: hidden; }
         .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 4px; }
-        .tag { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 8px 16px; border-radius: 99px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .glass-tag { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); }
     </style>
 </head>
 <body class="antialiased">
@@ -33,54 +33,17 @@
         </div>
     </nav>
 
-    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center border-b border-white/5">
-        <div class="text-purple-400 text-sm tracking-[4px] font-medium mb-3 uppercase">Industry Case Studies</div>
-        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase leading-none">Web Development</h1>
-        <p class="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">Engineered digital platforms for service leaders. We build for speed, security, and conversion.</p>
+    <section class="pt-40 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <div class="text-purple-400 text-sm tracking-[4px] font-medium mb-3 uppercase">Development Portfolio</div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tighter mb-6 uppercase">Web Solutions</h1>
+        <p class="text-white/60 text-lg max-w-2xl mx-auto">From custom service platforms to agency-level business management.</p>
     </section>
 
     <section class="py-24 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col gap-32">
             
             <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="browser-mockup group hover:border-purple-500/50 shadow-2xl">
-                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
-                        <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=1200&auto=format&fit=crop" class="w-full h-auto opacity-70 group-hover:opacity-100 transition duration-700">
-                </div>
-                <div>
-                    <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">Auto Masterz</h2>
-                    <p class="text-purple-400 text-sm font-bold uppercase tracking-widest mb-6">Automotive Service Infrastructure</p>
-                    <p class="text-white/60 text-lg leading-relaxed mb-8">Architected a robust service platform for high-volume automotive repair. Focused on streamlining lead generation through automated quote requests and detailed diagnostic service menus.</p>
-                    <div class="flex flex-wrap gap-3 mb-10">
-                        <span class="tag">Lead Gen Architecture</span>
-                        <span class="tag">React Framework</span>
-                        <span class="tag">Local SEO</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="lg:order-last browser-mockup group hover:border-purple-500/50 shadow-2xl">
-                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
-                        <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
-                    </div>
-                    <img src="https://images.unsplash.com/photo-1603386329225-868f9b1ee6c9?q=80&w=1200&auto=format&fit=crop" class="w-full h-auto opacity-70 group-hover:opacity-100 transition duration-700">
-                </div>
-                <div>
-                    <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">Solar Window Tint</h2>
-                    <p class="text-purple-400 text-sm font-bold uppercase tracking-widest mb-6">Visual Performance & E-Catalog</p>
-                    <p class="text-white/60 text-lg leading-relaxed mb-8">Developed a high-end visual showcase for premium film products. Integrated an interactive performance-data catalog to help customers compare heat-rejection benefits directly on the site.</p>
-                    <div class="flex flex-wrap gap-3 mb-10">
-                        <span class="tag">Visual Storytelling</span>
-                        <span class="tag">Data Presentation</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <a href="https://ricardorgreen-jpg.github.io/GentleKutz/" target="_blank" class="browser-mockup group hover:border-purple-500/50 shadow-2xl">
+                <a href="https://ricardorgreen-jpg.github.io/GentleKutz/" target="_blank" class="browser-mockup group transition-all duration-500 hover:border-purple-500/50">
                     <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
                         <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
                     </div>
@@ -88,12 +51,51 @@
                 </a>
                 <div>
                     <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">GentleKutz</h2>
-                    <p class="text-purple-400 text-sm font-bold uppercase tracking-widest mb-6">Grooming & Lifestyle Platform</p>
-                    <p class="text-white/60 text-lg leading-relaxed mb-8">A mobile-first platform built for modern grooming professionals. Features seamless booking integration and a minimalist UI designed for rapid conversion on high-traffic days.</p>
+                    <p class="text-purple-400 text-sm font-bold mb-6 uppercase tracking-[2px]">Service Branding & UI</p>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8">A specialized grooming platform focusing on high-contrast visuals and mobile-first navigation. Designed to convert social media traffic into client bookings.</p>
                     <div class="flex flex-wrap gap-3 mb-10">
-                        <span class="tag">Tailwind CSS</span>
-                        <span class="tag">UI/UX Design</span>
+                        <span class="px-4 py-2 glass-tag rounded-full text-[10px] font-bold uppercase tracking-widest">Tailwind CSS</span>
+                        <span class="px-4 py-2 glass-tag rounded-full text-[10px] font-bold uppercase tracking-widest">UI/UX</span>
                     </div>
+                    <a href="https://ricardorgreen-jpg.github.io/GentleKutz/" target="_blank" class="text-xs font-bold uppercase tracking-[3px] border-b border-purple-500 pb-2 hover:text-purple-400 transition">Visit Site</a>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="lg:order-last browser-mockup group transition-all duration-500 hover:border-purple-500/50">
+                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
+                        <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1537832816519-689ad163238b?q=80&w=1200&auto=format&fit=crop" class="w-full h-auto opacity-70 group-hover:opacity-100 transition duration-700">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">Yinka Modeling Agency</h2>
+                    <p class="text-purple-400 text-sm font-bold mb-6 uppercase tracking-[2px]">Enterprise Business Support</p>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8">Technical management and troubleshooting for a professional modeling platform. Focused on maintaining high availability and resolving critical backend deployment issues.</p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="px-4 py-2 glass-tag rounded-full text-[10px] font-bold uppercase tracking-widest">Tech Support</span>
+                        <span class="px-4 py-2 glass-tag rounded-full text-[10px] font-bold uppercase tracking-widest">Infrastructure</span>
+                    </div>
+                    <a href="https://Yinkamodelingagencyllc.com" target="_blank" class="text-xs font-bold uppercase tracking-[3px] border-b border-purple-500 pb-2 hover:text-purple-400 transition">Visit Site</a>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="browser-mockup group transition-all duration-500 hover:border-purple-500/50">
+                    <div class="bg-[#222] px-4 py-3 flex items-center gap-2 border-b border-white/5">
+                        <span class="dot bg-[#ff5f56]"></span><span class="dot bg-[#ffbd2e]"></span><span class="dot bg-[#27c93f]"></span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" class="w-full h-auto opacity-70 group-hover:opacity-100 transition duration-700">
+                </div>
+                <div>
+                    <h2 class="text-4xl font-bold tracking-tight mb-4 uppercase">RM Media Studio</h2>
+                    <p class="text-purple-400 text-sm font-bold mb-6 uppercase tracking-[2px]">Primary Digital Hub</p>
+                    <p class="text-white/60 text-lg leading-relaxed mb-8">The flagship agency site. Built using a modern React stack and Tailwind CSS to serve as a high-performance portfolio for multi-media services.</p>
+                    <div class="flex flex-wrap gap-3 mb-10">
+                        <span class="px-4 py-2 glass-tag rounded-full text-[10px] font-bold uppercase tracking-widest">React / Vite</span>
+                        <span class="px-4 py-2 glass-tag rounded-full text-[10px] font-bold uppercase tracking-widest">Vercel</span>
+                    </div>
+                    <a href="https://thergmedia.com" target="_blank" class="text-xs font-bold uppercase tracking-[3px] border-b border-purple-500 pb-2 hover:text-purple-400 transition">Current Hub</a>
                 </div>
             </div>
 
@@ -103,6 +105,5 @@
     <footer class="py-12 text-center text-[10px] uppercase tracking-[4px] text-white/30 border-t border-white/5">
         © 2026 RM Media Studio — Chicago, IL
     </footer>
-
 </body>
 </html>
