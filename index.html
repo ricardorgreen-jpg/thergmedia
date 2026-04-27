@@ -1,48 +1,52 @@
-<section id="services" class="py-32 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="mb-20">
-                <h2 class="text-5xl font-bold tracking-tighter uppercase mb-4">Signature Services</h2>
-                <div class="w-20 h-1.5 bg-purple-500"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 hover:border-purple-500/30 transition-all duration-500 group">
-                    <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-camera text-2xl text-purple-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Photography</h3>
-                    <p class="text-white/50 text-sm leading-relaxed mb-8">High-end commercial, portrait, and lifestyle captures.</p>
-                    <a href="studio-portraits.html" class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RM Media | Creative Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --background: #0a0a0a; }
+        body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="antialiased">
 
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 hover:border-purple-500/30 transition-all duration-500 group">
-                    <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-video text-2xl text-purple-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Videography</h3>
-                    <p class="text-white/50 text-sm leading-relaxed mb-8">Cinematic storytelling and professional post-production.</p>
-                    <a href="portfolio.html" class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 text-white no-underline">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+                    <span class="text-white font-bold text-xl tracking-tighter">RM</span>
                 </div>
-
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 hover:border-purple-500/30 transition-all duration-500 group">
-                    <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-code text-2xl text-purple-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Web Design</h3>
-                    <p class="text-white/50 text-sm leading-relaxed mb-8">High-performance builds for conversion-heavy platforms.</p>
-                    <a href="e-commerce.html" class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-                <div class="glass-card p-10 rounded-[2.5rem] border border-white/5 hover:border-purple-500/30 transition-all duration-500 group">
-                    <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-music text-2xl text-purple-400"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Audio</h3>
-                    <p class="text-white/50 text-sm leading-relaxed mb-8">Professional audio engineering and podcast production.</p>
-                    <a href="audio-production.html" class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
+                <span class="font-bold text-2xl tracking-tighter uppercase">RM Media</span>
+            </a>
+            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold">
+                <a href="#services" class="text-white hover:text-purple-400 transition">Services</a>
+                <a href="portfolio.html" class="text-white hover:text-purple-400 transition">Portfolio</a>
+                <a href="contact.html" class="text-white hover:text-purple-400 transition">Contact</a>
             </div>
         </div>
+    </nav>
+
+    <section class="min-h-screen flex items-center justify-center pt-20 text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 uppercase">Elevating <span class="text-purple-500">Digital Identity</span></h1>
+            <p class="text-white/60 text-lg mb-10">Premium media and web development for the modern entrepreneur.</p>
+            <a href="#services" class="px-10 py-4 bg-white text-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-purple-500 hover:text-white transition-all">Explore Services</a>
+        </div>
     </section>
+
+    <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="mb-20">
+            <h2 class="text-4xl font-bold uppercase tracking-tighter">Signature Services</h2>
+            <div class="w-16 h-1 bg-purple-500 mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-10 rounded-[2rem] border border-white/5 group hover:border-purple-500/50 transition">
+                <i class="fa-solid fa-camera text-2xl text-purple-400 mb-6 block"></i>
+                <h3 class="text-xl font-bold mb-4 uppercase">Photography</h3>
+                <p class="text-white/5
