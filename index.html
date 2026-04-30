@@ -3,80 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RM Media | Creative Studio</title>
+    <title>RM Media | Premium Creative Studio</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- EXTERNAL ASSETS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
         :root { --background: #0a0a0a; }
         body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
-        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s ease; }
-        .glass-card:hover { border-color: rgba(139, 92, 246, 0.5); transform: translateY(-5px); background: rgba(255, 255, 255, 0.05); }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card:hover { border-color: rgba(139, 92, 246, 0.5); transform: translateY(-8px); background: rgba(255, 255, 255, 0.06); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .hero-gradient { background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 60%); }
     </style>
 </head>
 <body class="antialiased">
 
+    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center group-hover:rotate-6 transition-transform">
                     <span class="text-white font-bold text-xl tracking-tighter">RM</span>
                 </div>
                 <span class="font-bold text-2xl tracking-tighter uppercase">RM Media</span>
             </a>
-            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold text-white/70">
-                <a href="#services" class="hover:text-purple-400 transition">Services</a>
-                <a href="portfolio.html" class="hover:text-purple-400 transition">Portfolio</a>
-                <a href="contact.html" class="hover:text-purple-400 transition">Contact</a>
+            <div class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-semibold">
+                <a href="#services" class="text-white/70 hover:text-purple-400 transition">Services</a>
+                <a href="portfolio.html" class="text-white/70 hover:text-purple-400 transition">Portfolio</a>
+                <a href="contact.html" class="text-white/70 hover:text-purple-400 transition">Contact</a>
             </div>
         </div>
     </nav>
 
-    <section class="min-h-screen flex items-center justify-center text-center px-6">
-        <div class="max-w-4xl">
-            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 uppercase leading-[0.9]">Elevating <br><span class="text-purple-500">Digital Identity</span></h1>
-            <p class="text-white/60 text-lg mb-10 max-w-xl mx-auto leading-relaxed">Premium photography, videography, and web development for the modern entrepreneur.</p>
-            <a href="#services" class="px-10 py-4 bg-white text-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-purple-500 hover:text-white transition-all">Explore Services</a>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-block px-4 py-1.5 mb-8 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-[10px] font-bold uppercase tracking-[4px]">
+                Creative Studio & Development
+            </div>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9] uppercase">
+                Elevating <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-violet-600">Digital Identity</span>
+            </h1>
+            <p class="text-white/50 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+                Custom web solutions and premium media production for service-based professionals.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="#services" class="px-10 py-4 bg-white text-black rounded-full font-bold uppercase tracking-widest text-xs hover:bg-purple-500 hover:text-white transition-all duration-300">Our Services</a>
+                <a href="contact.html" class="px-10 py-4 border border-white/10 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-white/5 transition-all duration-300">Get a Quote</a>
+            </div>
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="mb-20">
-            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter">Signature Services</h2>
-            <div class="w-16 h-1 bg-purple-500 mt-4"></div>
+        <div class="mb-24">
+            <div class="text-purple-500 text-sm font-bold uppercase tracking-[4px] mb-4">Expertise</div>
+            <h2 class="text-5xl font-bold uppercase tracking-tighter">Signature Services</h2>
+            <div class="w-16 h-1 bg-purple-500 mt-6"></div>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
+            <!-- Photography Card -->
             <a href="studio-portraits.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-camera text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Photography</h3>
-                <p class="text-white/50 text-sm leading-relaxed mb-8">Commercial and lifestyle captures designed to stand out.</p>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="text-white/40 text-sm leading-relaxed mb-10">High-end commercial and lifestyle captures that define your brand.</p>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">View Portfolio <i class="fa-solid fa-arrow-right"></i></span>
             </a>
 
-            <a href="urban-cinematics.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
+            <!-- Videography Card -->
+            <a href="portfolio.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-video text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Videography</h3>
-                <p class="text-white/50 text-sm leading-relaxed mb-8">Cinematic storytelling and professional post-production.</p>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="text-white/40 text-sm leading-relaxed mb-10">Cinematic storytelling and post-production for modern platforms.</p>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">View Reels <i class="fa-solid fa-arrow-right"></i></span>
             </a>
 
+            <!-- Web Design Card (LINKED TO E-COMMERCE) -->
             <a href="e-commerce.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-code text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Web Design</h3>
-                <p class="text-white/50 text-sm leading-relaxed mb-8">High-performance builds using React and Tailwind CSS.</p>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="text-white/40 text-sm leading-relaxed mb-10">High-performance React & Tailwind builds for conversion focus.</p>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Case Studies <i class="fa-solid fa-arrow-right"></i></span>
             </a>
 
+            <!-- Audio Card -->
             <a href="audio-production.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-music text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Audio</h3>
-                <p class="text-white/50 text-sm leading-relaxed mb-8">Professional audio engineering and podcast production.</p>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+                <p class="text-white/40 text-sm leading-relaxed mb-10">Professional engineering and podcast production solutions.</p>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Hear the Work <i class="fa-solid fa-arrow-right"></i></span>
             </a>
 
         </div>
     </section>
 
-    <footer class="py-12 text-center text-[10px] uppercase tracking-[4px
+    <!-- Footer -->
+    <footer class="py-16 text-center border-t border-white/5">
+        <div class="mb-8 flex justify-center gap-6 text-white/30 text-xl">
+            <a href="#" class="hover:text-purple-500 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:text-purple-500 transition"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <p class="text-[10px] uppercase tracking-[4px] text-white/20">© 2026 RM Media Studio — Calumet City, IL</p>
+    </footer>
+
+</body>
+</html>
