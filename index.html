@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RM Media | Premium Creative Studio</title>
     
-    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- EXTERNAL ASSETS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +15,7 @@
         :root { --background: #0a0a0a; }
         body { background-color: var(--background); color: #ffffff; font-family: 'Inter', sans-serif; margin: 0; }
         
-        /* Glass Card Refinement for Image Backgrounds */
+        /* Glass Card Refinement */
         .glass-card { 
             background: rgba(10, 10, 10, 0.4); 
             backdrop-filter: blur(12px); 
@@ -49,7 +47,6 @@
 </head>
 <body class="antialiased">
 
-    <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-lg border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 group">
@@ -66,7 +63,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 hero-bg">
         <div class="absolute inset-0 hero-gradient"></div>
         <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
@@ -86,7 +82,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="mb-24">
             <div class="text-purple-500 text-sm font-bold uppercase tracking-[4px] mb-4">Expertise</div>
@@ -95,7 +90,6 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Photography -->
             <a href="studio-portraits.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-camera text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Photography</h3>
@@ -103,15 +97,13 @@
                 <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">View Portfolio <i class="fa-solid fa-arrow-right"></i></span>
             </a>
 
-            <!-- Videography -->
-            <a href="portfolio.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
+            <a href="urban-cinematics.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-video text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Videography</h3>
                 <p class="text-white/60 text-sm leading-relaxed mb-10">Cinematic storytelling and post-production for modern platforms.</p>
                 <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">View Reels <i class="fa-solid fa-arrow-right"></i></span>
             </a>
 
-            <!-- Web Design -->
             <a href="e-commerce.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-code text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Web Design</h3>
@@ -119,7 +111,6 @@
                 <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400 flex items-center gap-2">Case Studies <i class="fa-solid fa-arrow-right"></i></span>
             </a>
 
-            <!-- Audio -->
             <a href="audio-production.html" class="glass-card p-10 rounded-[2.5rem] block group no-underline text-white">
                 <i class="fa-solid fa-music text-2xl text-purple-400 mb-8 block group-hover:scale-110 transition-transform"></i>
                 <h3 class="text-2xl font-bold mb-4 uppercase tracking-tighter">Audio</h3>
@@ -129,7 +120,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-16 text-center border-t border-white/5">
         <p class="text-[10px] uppercase tracking-[4px] text-white/20">© 2026 RM Media Studio — Calumet City, IL</p>
     </footer>
